@@ -26,146 +26,359 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;700;800&amp;family=Krona+One&amp;display=swap" rel="stylesheet"/>
 <link href="/assets/css/styles.css" rel="stylesheet"/>
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": ["Organization", "ProfessionalService"],
-        "@id": "https://burkemedia.pro/#organization",
-        "name": "BurkeMedia Productions",
-        "url": "https://burkemedia.pro/",
-        "logo": "https://burkemedia.pro/assets/img/bmp-logo-horizontal-higher-res.png",
-        "image": "https://burkemedia.pro/assets/img/coverimg-1.jpg",
-        "description": "BurkeMedia Productions provides website design, video production, photography, branding, SEO/AIO strategy, AI-assisted content creation, social media marketing and automation for small businesses.",
-        "telephone": "+1-760-660-1289",
-        "email": "hello@burkemedia.pro",
-        "areaServed": ["Palm Desert", "Palm Springs", "Coachella Valley", "Indio", "La Quinta", "Cathedral City", "Desert Hot Springs", "Rancho Mirage", "Southern California"],
-        "sameAs": [
-          "https://www.facebook.com/burkemedia",    
-          "https://www.instagram.com/burkemedia",
-          "https://www.youtube.com/@BurkemediaPro",
-          "https://x.com/burkemedia"
-        ],
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Digital marketing services",
-          "itemListElement": [
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web Design and Development" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Video Production" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Photography and Content Capture" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SEO and AIO Strategy" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Consulting and Client Training" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Branding and Graphic Design" } }
-          ]
+<script data-schema-upgrade="true" type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
+      "@id": "https://burkemedia.pro/#organization",
+      "name": "BurkeMedia Productions",
+      "url": "https://burkemedia.pro/",
+      "logo": "https://burkemedia.pro/assets/img/bmp-logo-horizontal-white-higher-res.png",
+      "image": "https://burkemedia.pro/assets/img/coverimg-1.jpg",
+      "description": "BurkeMedia Productions provides web design, video production, photography, branding, SEO/AIO strategy, AI-assisted content, social media and business system integration for small businesses in Palm Desert and the Coachella Valley.",
+      "telephone": "+1-760-660-1289",
+      "email": "hello@burkemedia.pro",
+      "founder": {
+        "@type": "Person",
+        "name": "Michael Ray Burke"
+      },
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Palm Desert"
+        },
+        {
+          "@type": "Place",
+          "name": "Palm Springs"
+        },
+        {
+          "@type": "Place",
+          "name": "Coachella Valley"
+        },
+        {
+          "@type": "Place",
+          "name": "Indio"
+        },
+        {
+          "@type": "Place",
+          "name": "La Quinta"
+        },
+        {
+          "@type": "Place",
+          "name": "Cathedral City"
+        },
+        {
+          "@type": "Place",
+          "name": "Desert Hot Springs"
+        },
+        {
+          "@type": "Place",
+          "name": "Rancho Mirage"
+        },
+        {
+          "@type": "Place",
+          "name": "Indian Wells"
+        },
+        {
+          "@type": "Place",
+          "name": "Coachella"
+        },
+        {
+          "@type": "Place",
+          "name": "Southern California"
         }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Palm Desert",
+        "addressRegion": "CA",
+        "addressCountry": "US"
       },
-      {
-        "@type": "WebSite",
-        "@id": "https://burkemedia.pro/#website",
-        "url": "https://burkemedia.pro/",
-        "name": "BurkeMedia Productions",
-        "publisher": { "@id": "https://burkemedia.pro/#organization" }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://burkemedia.pro/#webpage",
-        "url": "https://burkemedia.pro/",
-        "name": "BurkeMedia Productions | Palm Desert Web Design & Development, Branding, Video, SEO, AIO & AI Consulting",
-        "description": "BurkeMedia Productions helps small businesses grow with websites, video production, photography, branding, SEO/AIO, AI-assisted content, social media and automation.",
-        "isPartOf": { "@id": "https://burkemedia.pro/#website" },
-        "about": { "@id": "https://burkemedia.pro/#organization" },
-        "inLanguage": "en-US"
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://burkemedia.pro/#faq",
-        "mainEntity": [
+      "sameAs": [
+        "https://www.facebook.com/burkemedia",
+        "https://www.instagram.com/burkemedia",
+        "https://www.youtube.com/@BurkemediaPro",
+        "https://x.com/burkemedia"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "BurkeMedia digital marketing services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Web Design and Development",
+              "provider": {
+                "@id": "https://burkemedia.pro/#organization"
+              },
+              "areaServed": [
                 {
-                        "@type": "Question",
-                        "name": "I know I need better marketing, but I am not sure where to start. Can you help?",
-                        "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Yes. We can start with a practical audit of your website, content, Google presence, social media, SEO, AI visibility and workflow. From there, we map the most useful next steps instead of overwhelming you with everything at once."
-                        }
-                },
-                {
-                        "@type": "Question",
-                        "name": "Can you build or rebuild my website if I do not have the copy ready?",
-                        "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Yes. We can interview you, organize your services, capture real photos and video, and turn what you already know into clear website copy, page sections, FAQs, calls-to-action and future content ideas."
-                        }
-                },
-                {
-                        "@type": "Question",
-                        "name": "Do you handle the photos and videos for the website too?",
-                        "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Yes. BurkeMedia can plan and capture the visual content your website needs, including team photos, service photos, b-roll, interviews, short background videos and content that can also be used for social media and Google Business updates."
-                        }
-                },
-                {
-                        "@type": "Question",
-                        "name": "How do SEO and AIO fit into a new website?",
-                        "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "We structure pages around the services, locations, questions and proof that real customers search for. That includes stronger page copy, headings, FAQs, schema, local content and helpful answers that support both traditional search and AI-assisted discovery."
-                        }
-                },
-                {
-                        "@type": "Question",
-                        "name": "Can one shoot really turn into multiple pieces of content?",
-                        "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Yes. A planned shoot can support website visuals, homepage video clips, service page content, reels, testimonial clips, Google Business posts, YouTube content, blog ideas and future campaigns."
-                        }
-                },
-                {
-                        "@type": "Question",
-                        "name": "Do you help with branding, logos or the overall look of the business?",
-                        "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Yes. We can help with brand refreshes, logo cleanup, colors, typography, graphics, flyers, social templates and the visual direction needed to make the website and content feel consistent."
-                        }
-                },
-                {
-                        "@type": "Question",
-                        "name": "Can you connect the website to forms, leads and automation?",
-                        "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Yes. We can connect websites to contact forms, lead tracking, email notifications, booking links, CRMs, follow-up workflows and future ServiceUp-powered systems where it makes sense."
-                        }
-                },
-                {
-                        "@type": "Question",
-                        "name": "Do you train businesses to use AI without sounding robotic?",
-                        "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Yes. We help business owners and teams use AI responsibly for planning, brainstorming, drafting, repurposing and organizing content while keeping the final voice human, local and accurate."
-                        }
-                },
-                {
-                        "@type": "Question",
-                        "name": "What types of businesses does BurkeMedia usually work with?",
-                        "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "We work with local and service-based businesses including restaurants, auto repair shops, martial arts schools, fitness studios, counseling centers, surrogacy agencies, real estate teams, home service companies, nonprofits and community organizations."
-                        }
-                },
-                {
-                        "@type": "Question",
-                        "name": "What does starting a project with BurkeMedia usually look like?",
-                        "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "It usually starts with a conversation. We talk through what is working, what is not, what you already have, what needs to be created, and what would make the biggest difference first. Then we build a realistic plan around your website, content, video, SEO/AIO and systems."
-                        }
+                  "@type": "Place",
+                  "name": "Coachella Valley"
                 }
+              ]
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Video Production",
+              "provider": {
+                "@id": "https://burkemedia.pro/#organization"
+              },
+              "areaServed": [
+                {
+                  "@type": "Place",
+                  "name": "Coachella Valley"
+                }
+              ]
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Photography and Content Capture",
+              "provider": {
+                "@id": "https://burkemedia.pro/#organization"
+              },
+              "areaServed": [
+                {
+                  "@type": "Place",
+                  "name": "Coachella Valley"
+                }
+              ]
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "SEO and AIO Strategy",
+              "provider": {
+                "@id": "https://burkemedia.pro/#organization"
+              },
+              "areaServed": [
+                {
+                  "@type": "Place",
+                  "name": "Coachella Valley"
+                }
+              ]
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Social Media Content",
+              "provider": {
+                "@id": "https://burkemedia.pro/#organization"
+              },
+              "areaServed": [
+                {
+                  "@type": "Place",
+                  "name": "Coachella Valley"
+                }
+              ]
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Branding and Graphic Design",
+              "provider": {
+                "@id": "https://burkemedia.pro/#organization"
+              },
+              "areaServed": [
+                {
+                  "@type": "Place",
+                  "name": "Coachella Valley"
+                }
+              ]
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "CRM, Automation and Business System Integration",
+              "provider": {
+                "@id": "https://burkemedia.pro/#organization"
+              },
+              "areaServed": [
+                {
+                  "@type": "Place",
+                  "name": "Coachella Valley"
+                }
+              ]
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Content Creation",
+              "provider": {
+                "@id": "https://burkemedia.pro/#organization"
+              },
+              "areaServed": [
+                {
+                  "@type": "Place",
+                  "name": "Coachella Valley"
+                }
+              ]
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AI Consulting and Training",
+              "provider": {
+                "@id": "https://burkemedia.pro/#organization"
+              },
+              "areaServed": [
+                {
+                  "@type": "Place",
+                  "name": "Coachella Valley"
+                }
+              ]
+            }
+          }
         ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://burkemedia.pro/#website",
+      "url": "https://burkemedia.pro/",
+      "name": "BurkeMedia Productions",
+      "publisher": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://burkemedia.pro/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://burkemedia.pro/#webpage",
+      "url": "https://burkemedia.pro/",
+      "name": "BurkeMedia Productions | Palm Desert Digital Marketing",
+      "description": "BurkeMedia Productions helps small businesses grow with websites, video production, photography, branding, SEO/AIO, AI-assisted content, social media and automation in Palm Desert and the Coachella Valley.",
+      "image": "https://burkemedia.pro/assets/img/coverimg-1.jpg",
+      "isPartOf": {
+        "@id": "https://burkemedia.pro/#website"
+      },
+      "about": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "publisher": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://burkemedia.pro/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Strategy I know I need better marketing, but I am not sure where to start. Can you help?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We can start with a practical audit of your website, content, Google presence, social media, SEO, AI visibility and workflow. From there, we map the most useful next steps instead of overwhelming you with everything at once."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Website Can you build or rebuild my website if I do not have the copy ready?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We can interview you, organize your services, capture real photos and video, and turn what you already know into clear website copy, page sections, FAQs, calls-to-action and future content ideas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Video Do you handle the photos and videos for the website too?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. BurkeMedia can plan and capture the visual content your website needs, including team photos, service photos, b-roll, interviews, short background videos and content that can also be used for social media and Google Business updates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "SEO/AIO How do SEO and AIO fit into a new website?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We structure pages around the services, locations, questions and proof that real customers search for. That includes stronger page copy, headings, FAQs, schema, local content and helpful answers that support both traditional search and AI-assisted discovery."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Content Can one shoot really turn into multiple pieces of content?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. A planned shoot can support website visuals, homepage video clips, service page content, reels, testimonial clips, Google Business posts, YouTube content, blog ideas and future campaigns."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Branding Do you help with branding, logos or the overall look of the business?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We can help with brand refreshes, logo cleanup, colors, typography, graphics, flyers, social templates and the visual direction needed to make the website and content feel consistent."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Automation Can you connect the website to forms, leads and automation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We can connect websites to contact forms, lead tracking, email notifications, booking links, CRMs, follow-up workflows and future ServiceUp-powered systems where it makes sense."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "AI Do you train businesses to use AI without sounding robotic?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We help business owners and teams use AI responsibly for planning, brainstorming, drafting, repurposing and organizing content while keeping the final voice human, local and accurate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Industries What types of businesses does BurkeMedia usually work with?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We work with local and service-based businesses including restaurants, auto repair shops, martial arts schools, fitness studios, counseling centers, surrogacy agencies, real estate teams, home service companies, nonprofits and community organizations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Next step What does starting a project with BurkeMedia usually look like?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It usually starts with a conversation. We talk through what is working, what is not, what you already have, what needs to be created, and what would make the biggest difference first. Then we build a realistic plan around your website, content, video, SEO/AIO and systems."
+          }
+        }
+      ]
+    }
+  ]
 }
-    ]
-  }
-  </script>
+</script>
+
 <meta name="theme-color" content="#4a76ba">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">

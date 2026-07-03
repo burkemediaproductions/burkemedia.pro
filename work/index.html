@@ -23,39 +23,337 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;700;800&amp;family=Krona+One&amp;display=swap" rel="stylesheet"/>
 <link href="/assets/css/styles.css" rel="stylesheet"/>
-<script type="application/ld+json">{
+
+<script data-schema-upgrade="true" type="application/ld+json">
+{
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["Organization", "ProfessionalService"],
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
       "@id": "https://burkemedia.pro/#organization",
       "name": "BurkeMedia Productions",
       "url": "https://burkemedia.pro/",
       "logo": "https://burkemedia.pro/assets/img/bmp-logo-horizontal-white-higher-res.png",
       "image": "https://burkemedia.pro/assets/img/coverimg-1.jpg",
+      "description": "BurkeMedia Productions provides web design, video production, photography, branding, SEO/AIO strategy, AI-assisted content, social media and business system integration for small businesses in Palm Desert and the Coachella Valley.",
       "telephone": "+1-760-660-1289",
-      "email": "hello@burkemedia.pro"
-    }
-  ]
-}</script>
-<script data-breadcrumb-schema="true" type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://burkemedia.pro/"
+      "email": "hello@burkemedia.pro",
+      "founder": {
+        "@type": "Person",
+        "name": "Michael Ray Burke"
+      },
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Palm Desert"
+        },
+        {
+          "@type": "Place",
+          "name": "Palm Springs"
+        },
+        {
+          "@type": "Place",
+          "name": "Coachella Valley"
+        },
+        {
+          "@type": "Place",
+          "name": "Indio"
+        },
+        {
+          "@type": "Place",
+          "name": "La Quinta"
+        },
+        {
+          "@type": "Place",
+          "name": "Cathedral City"
+        },
+        {
+          "@type": "Place",
+          "name": "Desert Hot Springs"
+        },
+        {
+          "@type": "Place",
+          "name": "Rancho Mirage"
+        },
+        {
+          "@type": "Place",
+          "name": "Indian Wells"
+        },
+        {
+          "@type": "Place",
+          "name": "Coachella"
+        },
+        {
+          "@type": "Place",
+          "name": "Southern California"
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Palm Desert",
+        "addressRegion": "CA",
+        "addressCountry": "US"
+      },
+      "sameAs": [
+        "https://www.facebook.com/burkemedia",
+        "https://www.instagram.com/burkemedia",
+        "https://www.youtube.com/@BurkemediaPro",
+        "https://x.com/burkemedia"
+      ]
     },
     {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Work",
-      "item": "https://burkemedia.pro/work/"
+      "@type": "WebSite",
+      "@id": "https://burkemedia.pro/#website",
+      "url": "https://burkemedia.pro/",
+      "name": "BurkeMedia Productions",
+      "publisher": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://burkemedia.pro/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://burkemedia.pro/work/#webpage",
+      "url": "https://burkemedia.pro/work/",
+      "name": "Work & Case Studies | BurkeMedia Productions",
+      "description": "BurkeMedia client work across websites, video, photography, branding, SEO/AIO, content and digital systems for local businesses and growing brands.",
+      "image": "https://burkemedia.pro/assets/img/coverimg-1.jpg",
+      "isPartOf": {
+        "@id": "https://burkemedia.pro/#website"
+      },
+      "about": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "publisher": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://burkemedia.pro/work/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://burkemedia.pro/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Real projects built from websites, video, content and practical digital systems.",
+          "item": "https://burkemedia.pro/work/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://burkemedia.pro/work/#itemlist",
+      "name": "BurkeMedia case studies",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "url": "https://burkemedia.pro/work/california-nations-indian-gaming-association/",
+          "name": "Association / Conference California Nations Indian Gaming Association Website redevelopment, member resources, database management, social media, conference video coverage and a custom Western Indian Gaming Conference app experience."
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "url": "https://burkemedia.pro/work/hosanna-city-church/",
+          "name": "Church / Faith-Based Hosanna City Church Website development, livestream integration, donation app support, Google Calendar syncing, photography, welcome videos and ministry video production."
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "url": "https://burkemedia.pro/work/linkedmsp/",
+          "name": "Managed IT LinkedMSP Website redesign, WordPress development, service organization and scalable backend planning for an established managed service provider."
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "url": "https://burkemedia.pro/work/access-senior-home-care/",
+          "name": "Senior Home Care Access Senior Home Care A warm, polished and lead-focused website for a senior home care company serving families, seniors, caregivers and referral partners."
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "url": "https://burkemedia.pro/work/wounded-refuge/",
+          "name": "Nonprofit / Ministry Wounded Refuge A warm nonprofit and ministry website built around healing, events, donations, content and community connection."
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "url": "https://burkemedia.pro/work/law-offices-quintanilla-associates/",
+          "name": "Law Firm The Law Offices of Quintanilla & Associates Digital and promotional support for a law firm’s professional, credible and community-facing presence."
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "url": "https://burkemedia.pro/work/robolights/",
+          "name": "Art Attraction Robolights Website and video storytelling for one of the Coachella Valley’s most visually memorable art attractions."
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "url": "https://burkemedia.pro/work/tony-bolivar/",
+          "name": "Musician Tony Bolivar A musician website and visual content system built around performances, calendar updates, video and booking opportunities."
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "url": "https://burkemedia.pro/work/art-reynolds-music/",
+          "name": "Music / Legacy Artist Art Reynolds Music Music video, photography and release storytelling for a historically significant gospel, soul and R&B artist."
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "url": "https://burkemedia.pro/work/sals-iron/",
+          "name": "Skilled Trades Sal’s Iron Website, photography, video and local visibility support for a skilled trade business built around craftsmanship."
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "url": "https://burkemedia.pro/work/containabode/",
+          "name": "Alternative Housing ContainAbode A complete digital and brand presence for a modern container-home and alternative housing concept."
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "url": "https://burkemedia.pro/work/desert-bohemian-trading-post/",
+          "name": "Vintage / Resale Desert Bohemian Trading Post Branding, website direction and visual content for a quirky vintage resale shop in Twentynine Palms."
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "url": "https://burkemedia.pro/work/vintage-express/",
+          "name": "Vintage / Ecommerce Vintage Express A polished digital and brand presence with inventory and ecommerce functionality for Vintage Express."
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "url": "https://burkemedia.pro/work/local-candidate-campaigns/",
+          "name": "Campaigns Local Candidate & Public Campaigns Campaign branding, websites, photography, video, social media, print materials and digital tools for local candidates and public campaigns."
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "url": "https://burkemedia.pro/work/handy-angels/",
+          "name": "Home Services Handy Angels Website development, logo design, photography, video production, review placement and local SEO/AIO support for a local service-based business."
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "url": "https://burkemedia.pro/work/canyon-lanes-at-morongo/",
+          "name": "Bowling / Family Entertainment Canyon Lanes at Morongo Website redevelopment, booking paths, event functionality, promotional video production and social media strategy for a major entertainment venue."
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "url": "https://burkemedia.pro/work/hadley-fruit-orchards/",
+          "name": "Retail / Ecommerce / Destination Hadley Fruit Orchards Website rebuild, ecommerce, inventory organization, cafe menu functionality, photography, video, social content and historical brand storytelling."
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "url": "https://burkemedia.pro/work/haskell-real-estate/",
+          "name": "Real Estate / Property Management Haskell Real Estate Website redevelopment, refreshed branding, photography, video-driven visuals, rental listings and maintenance request functionality."
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "url": "https://burkemedia.pro/work/mykonos-greek-mediterranean/",
+          "name": "Restaurant Mykonos Greek Mediterranean Review-focused website improvements, local SEO/AIO, business information consistency, restaurant photos and a more polished customer experience."
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "url": "https://burkemedia.pro/work/victors-mexican-food/",
+          "name": "Restaurant / Online Ordering Victor’s Mexican Food Website development, local SEO/AIO, Clover-connected ordering, crawlable menu structure, video, food photography and social media content."
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "url": "https://burkemedia.pro/work/platinum-auto-repair-collision/",
+          "name": "Auto Repair Platinum Auto Repair & Collision Website, promotional video, social media and lead generation support for an auto repair and collision business."
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "url": "https://burkemedia.pro/work/new-beginnings-surrogacy-group/",
+          "name": "Surrogacy New Beginnings Surrogacy Group A warm, accessible web presence with surrogate-focused content strategy, forms and brand-driven layout planning."
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "url": "https://burkemedia.pro/work/kihon-mma/",
+          "name": "Martial Arts Kihon MMA Martial arts school marketing with class promotion, content support and youth/adult program messaging."
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "url": "https://burkemedia.pro/work/studio-66-pilates/",
+          "name": "Fitness Studio 66 Pilates Brand refinement, website planning and content direction for a boutique fitness studio."
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "url": "https://burkemedia.pro/work/sorbo-products/",
+          "name": "Product Brand Sörbo Products Product, technique and brand storytelling content for a window cleaning industry innovator and artist."
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "url": "https://burkemedia.pro/work/coachella-valley-com/",
+          "name": "Local Media CoachellaValley.com Community-focused digital platform planning, city pages and regional influence strategy."
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "url": "https://burkemedia.pro/work/change-the-influence/",
+          "name": "Counseling Change the Influence Website, logo, photography, promotional video and content planning for a counseling center."
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "url": "https://burkemedia.pro/work/direct-connect-enterprise/",
+          "name": "Healthcare Education Direct Connect Enterprise Interview-style video content, education-focused messaging and social media planning."
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "url": "https://burkemedia.pro/work/emerge-home-services/",
+          "name": "Real Estate / Mortgage Emerge Home Services App and portal planning for customers, agents and internal teams with CRM/process integrations."
+        }
+      ]
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://burkemedia.pro/work/#collection",
+      "url": "https://burkemedia.pro/work/",
+      "name": "Real projects built from websites, video, content and practical digital systems.",
+      "description": "BurkeMedia client work across websites, video, photography, branding, SEO/AIO, content and digital systems for local businesses and growing brands.",
+      "mainEntity": {
+        "@id": "https://burkemedia.pro/work/#itemlist"
+      },
+      "isPartOf": {
+        "@id": "https://burkemedia.pro/#website"
+      }
     }
   ]
-}</script><meta name="theme-color" content="#4a76ba">
+}
+</script>
+
+<meta name="theme-color" content="#4a76ba">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">

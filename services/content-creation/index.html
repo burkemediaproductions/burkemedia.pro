@@ -23,7 +23,8 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;700;800&amp;family=Krona+One&amp;display=swap" rel="stylesheet"/>
 <link href="/assets/css/styles.css" rel="stylesheet"/>
-<script type="application/ld+json">{
+<script data-schema-upgrade="true" type="application/ld+json">
+{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -36,19 +37,65 @@
       "url": "https://burkemedia.pro/",
       "logo": "https://burkemedia.pro/assets/img/bmp-logo-horizontal-white-higher-res.png",
       "image": "https://burkemedia.pro/assets/img/coverimg-1.jpg",
+      "description": "BurkeMedia Productions provides web design, video production, photography, branding, SEO/AIO strategy, AI-assisted content, social media and business system integration for small businesses in Palm Desert and the Coachella Valley.",
       "telephone": "+1-760-660-1289",
       "email": "hello@burkemedia.pro",
+      "founder": {
+        "@type": "Person",
+        "name": "Michael Ray Burke"
+      },
       "areaServed": [
-        "Palm Desert",
-        "Palm Springs",
-        "Coachella Valley",
-        "Indio",
-        "La Quinta",
-        "Cathedral City",
-        "Desert Hot Springs",
-        "Rancho Mirage",
-        "Southern California"
+        {
+          "@type": "Place",
+          "name": "Palm Desert"
+        },
+        {
+          "@type": "Place",
+          "name": "Palm Springs"
+        },
+        {
+          "@type": "Place",
+          "name": "Coachella Valley"
+        },
+        {
+          "@type": "Place",
+          "name": "Indio"
+        },
+        {
+          "@type": "Place",
+          "name": "La Quinta"
+        },
+        {
+          "@type": "Place",
+          "name": "Cathedral City"
+        },
+        {
+          "@type": "Place",
+          "name": "Desert Hot Springs"
+        },
+        {
+          "@type": "Place",
+          "name": "Rancho Mirage"
+        },
+        {
+          "@type": "Place",
+          "name": "Indian Wells"
+        },
+        {
+          "@type": "Place",
+          "name": "Coachella"
+        },
+        {
+          "@type": "Place",
+          "name": "Southern California"
+        }
       ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Palm Desert",
+        "addressRegion": "CA",
+        "addressCountry": "US"
+      },
       "sameAs": [
         "https://www.facebook.com/burkemedia",
         "https://www.instagram.com/burkemedia",
@@ -63,6 +110,12 @@
       "name": "BurkeMedia Productions",
       "publisher": {
         "@id": "https://burkemedia.pro/#organization"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://burkemedia.pro/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
       }
     },
     {
@@ -71,13 +124,20 @@
       "url": "https://burkemedia.pro/services/content-creation/",
       "name": "Content Creation | BurkeMedia Productions",
       "description": "A guided content system that turns interviews, photos and video into useful website and social media material. BurkeMedia provides content creation in Palm Desert and the Coachella Valley.",
+      "image": "https://burkemedia.pro/assets/img/coverimg-1.jpg",
       "isPartOf": {
         "@id": "https://burkemedia.pro/#website"
       },
       "about": {
         "@id": "https://burkemedia.pro/#organization"
       },
-      "inLanguage": "en-US"
+      "publisher": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "inLanguage": "en-US",
+      "mainEntity": {
+        "@id": "https://burkemedia.pro/services/content-creation/#service"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -98,7 +158,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Content Creation",
+          "name": "Content Creation for small businesses ready to grow.",
           "item": "https://burkemedia.pro/services/content-creation/"
         }
       ]
@@ -107,18 +167,64 @@
       "@type": "Service",
       "@id": "https://burkemedia.pro/services/content-creation/#service",
       "name": "Content Creation",
-      "description": "A guided content system that turns interviews, photos and video into useful website and social media material.",
+      "description": "A guided content process that turns interviews, photos, video and customer questions into useful website, blog, social and search content.",
       "provider": {
         "@id": "https://burkemedia.pro/#organization"
       },
+      "url": "https://burkemedia.pro/services/content-creation/",
+      "image": "https://burkemedia.pro/assets/img/coverimg-1.jpg",
       "areaServed": [
-        "Palm Desert",
-        "Coachella Valley",
-        "Southern California"
-      ]
+        {
+          "@type": "Place",
+          "name": "Palm Desert"
+        },
+        {
+          "@type": "Place",
+          "name": "Palm Springs"
+        },
+        {
+          "@type": "Place",
+          "name": "Coachella Valley"
+        },
+        {
+          "@type": "Place",
+          "name": "Indio"
+        },
+        {
+          "@type": "Place",
+          "name": "La Quinta"
+        },
+        {
+          "@type": "Place",
+          "name": "Cathedral City"
+        },
+        {
+          "@type": "Place",
+          "name": "Desert Hot Springs"
+        },
+        {
+          "@type": "Place",
+          "name": "Rancho Mirage"
+        },
+        {
+          "@type": "Place",
+          "name": "Indian Wells"
+        },
+        {
+          "@type": "Place",
+          "name": "Coachella"
+        },
+        {
+          "@type": "Place",
+          "name": "Southern California"
+        }
+      ],
+      "serviceType": "Content Creation"
     }
   ]
-}</script>
+}
+</script>
+
 <meta name="theme-color" content="#4a76ba">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">

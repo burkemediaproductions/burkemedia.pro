@@ -23,7 +23,8 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;700;800&amp;family=Krona+One&amp;display=swap" rel="stylesheet"/>
 <link href="/assets/css/styles.css" rel="stylesheet"/>
-<script type="application/ld+json">
+
+<script data-schema-upgrade="true" type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -37,8 +38,71 @@
       "url": "https://burkemedia.pro/",
       "logo": "https://burkemedia.pro/assets/img/bmp-logo-horizontal-white-higher-res.png",
       "image": "https://burkemedia.pro/assets/img/coverimg-1.jpg",
+      "description": "BurkeMedia Productions provides web design, video production, photography, branding, SEO/AIO strategy, AI-assisted content, social media and business system integration for small businesses in Palm Desert and the Coachella Valley.",
       "telephone": "+1-760-660-1289",
-      "email": "hello@burkemedia.pro"
+      "email": "hello@burkemedia.pro",
+      "founder": {
+        "@type": "Person",
+        "name": "Michael Ray Burke"
+      },
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Palm Desert"
+        },
+        {
+          "@type": "Place",
+          "name": "Palm Springs"
+        },
+        {
+          "@type": "Place",
+          "name": "Coachella Valley"
+        },
+        {
+          "@type": "Place",
+          "name": "Indio"
+        },
+        {
+          "@type": "Place",
+          "name": "La Quinta"
+        },
+        {
+          "@type": "Place",
+          "name": "Cathedral City"
+        },
+        {
+          "@type": "Place",
+          "name": "Desert Hot Springs"
+        },
+        {
+          "@type": "Place",
+          "name": "Rancho Mirage"
+        },
+        {
+          "@type": "Place",
+          "name": "Indian Wells"
+        },
+        {
+          "@type": "Place",
+          "name": "Coachella"
+        },
+        {
+          "@type": "Place",
+          "name": "Southern California"
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Palm Desert",
+        "addressRegion": "CA",
+        "addressCountry": "US"
+      },
+      "sameAs": [
+        "https://www.facebook.com/burkemedia",
+        "https://www.instagram.com/burkemedia",
+        "https://www.youtube.com/@BurkemediaPro",
+        "https://x.com/burkemedia"
+      ]
     },
     {
       "@type": "WebSite",
@@ -47,6 +111,12 @@
       "name": "BurkeMedia Productions",
       "publisher": {
         "@id": "https://burkemedia.pro/#organization"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://burkemedia.pro/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
       }
     },
     {
@@ -55,35 +125,427 @@
       "url": "https://burkemedia.pro/reviews/",
       "name": "Client Reviews & Testimonials | BurkeMedia Productions",
       "description": "Real reviews and testimonials from BurkeMedia clients across websites, video, branding, SEO, content, event coverage and digital strategy.",
+      "image": "https://burkemedia.pro/assets/img/coverimg-1.jpg",
       "isPartOf": {
         "@id": "https://burkemedia.pro/#website"
       },
       "about": {
         "@id": "https://burkemedia.pro/#organization"
       },
-      "inLanguage": "en-US"
+      "publisher": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "inLanguage": "en-US",
+      "mainEntity": [
+        {
+          "@id": "https://burkemedia.pro/reviews/#review-1"
+        },
+        {
+          "@id": "https://burkemedia.pro/reviews/#review-2"
+        },
+        {
+          "@id": "https://burkemedia.pro/reviews/#review-3"
+        },
+        {
+          "@id": "https://burkemedia.pro/reviews/#review-4"
+        },
+        {
+          "@id": "https://burkemedia.pro/reviews/#review-5"
+        },
+        {
+          "@id": "https://burkemedia.pro/reviews/#review-6"
+        },
+        {
+          "@id": "https://burkemedia.pro/reviews/#review-7"
+        },
+        {
+          "@id": "https://burkemedia.pro/reviews/#review-8"
+        },
+        {
+          "@id": "https://burkemedia.pro/reviews/#review-9"
+        },
+        {
+          "@id": "https://burkemedia.pro/reviews/#review-10"
+        },
+        {
+          "@id": "https://burkemedia.pro/reviews/#review-11"
+        },
+        {
+          "@id": "https://burkemedia.pro/reviews/#review-12"
+        },
+        {
+          "@id": "https://burkemedia.pro/reviews/#review-13"
+        },
+        {
+          "@id": "https://burkemedia.pro/reviews/#review-14"
+        },
+        {
+          "@id": "https://burkemedia.pro/reviews/#review-15"
+        },
+        {
+          "@id": "https://burkemedia.pro/reviews/#review-16"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://burkemedia.pro/reviews/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://burkemedia.pro/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Client Reviews & Testimonials",
+          "item": "https://burkemedia.pro/reviews/"
+        }
+      ]
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Chris Enrico"
+      },
+      "reviewBody": "Burke Media Productions helped me with taking a concept and making it a reality. They did a great logo, took great hand shots and made a stunning website. Thank you for taking my idea and creating a brand.",
+      "itemReviewed": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "publisher": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "name": "Owner, Direct Connect Enterprise • Google review",
+      "@id": "https://burkemedia.pro/reviews/#review-1"
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Susan Jensen"
+      },
+      "reviewBody": "BurkeMedia Productions has done an excellent job for our organization. Their upgrade of our web site was inspired and eye catching, as well as intuitive to navigate. They also stay on top of our social media and regularly post relevant and insightful content that shows a depth of understanding of our large, sprawling organization. Michael is very creative and energetic and seems to quite enjoy what he does. We would certainly recommend them.",
+      "itemReviewed": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "publisher": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "name": "Former Deputy Director, California Nations Indian Gaming Association (CNIGA) • Email testimonial",
+      "@id": "https://burkemedia.pro/reviews/#review-2"
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Dave Barmore"
+      },
+      "reviewBody": "We worked with BurkeMedia for about a year. I found them very responsive to my changing needs and always had good business options.",
+      "itemReviewed": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "publisher": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "name": "Former Manager, Canyon Lanes at Morongo • Google review",
+      "@id": "https://burkemedia.pro/reviews/#review-3"
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Love N."
+      },
+      "reviewBody": "Recently, I contacted Mike Burke of Burke Media Productions for help with my SEO rankings and website issues for my business. Mike was so helpful and knowledgeable with all my concerns and questions. He was timely in getting my issues resolved, and met with me multiple times in person to help me with my website problems. The best part is that I received three telephone calls from new clients within three days as I am finally being seen on searches by potential clients! I am so grateful for all of Mike's help and assistance. Their prices are very fair too. I highly recommend Burke Media Productions for your business needs!",
+      "itemReviewed": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "publisher": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "name": "Yelp review • Desert Hot Springs, CA",
+      "@id": "https://burkemedia.pro/reviews/#review-4"
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Brown Miller"
+      },
+      "reviewBody": "BurkeMedia is a great resource for businesses that need high quality video and web content creation. Social media, email marketing, web hosting and development, drone videos, you name it. Michael Burke is a sweet guy and his wife, Cariza is charming and beautiful. They are a pleasure to work with.",
+      "itemReviewed": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "publisher": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "name": "Google review",
+      "@id": "https://burkemedia.pro/reviews/#review-5"
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Michael O’Keefe"
+      },
+      "reviewBody": "Michael Burke is creative and productive. He is easy to work with and always has his clients' best interests at heart. Good man.",
+      "itemReviewed": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "publisher": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "name": "Google review",
+      "@id": "https://burkemedia.pro/reviews/#review-6"
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Mercedes Montana"
+      },
+      "reviewBody": "Michael is very professional. He created my website in a timely manner and was always upfront about everything.",
+      "itemReviewed": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "publisher": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "name": "Owner, Change the Influence • Google review",
+      "@id": "https://burkemedia.pro/reviews/#review-7"
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Covenant Church Live DHS"
+      },
+      "reviewBody": "We hired Michael for a couple of our events and he did a great job! Always showed up early, very professional and easy to work with.",
+      "itemReviewed": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "publisher": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "name": "Google review",
+      "@id": "https://burkemedia.pro/reviews/#review-8"
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Anthony Sanchez"
+      },
+      "reviewBody": "I booked Michael and Cariza as my wedding photographer. Cariza was able to capture the moments, myself and bridesmaids, and the whole experience was amazing.",
+      "itemReviewed": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "publisher": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "name": "Google review",
+      "@id": "https://burkemedia.pro/reviews/#review-9"
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "James Taylor"
+      },
+      "reviewBody": "I have been working with Michael Burke and BurkeMedia Productions for over 11 years. Michael has done excellent work.",
+      "itemReviewed": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "publisher": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "name": "Google review",
+      "@id": "https://burkemedia.pro/reviews/#review-10"
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Sean Jones"
+      },
+      "reviewBody": "BurkeMedia always goes over and above anything that is asked. Anything that is done is done on time.",
+      "itemReviewed": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "publisher": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "name": "Pastor, Hosanna City Church • Google review",
+      "@id": "https://burkemedia.pro/reviews/#review-11"
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "James Nindel"
+      },
+      "reviewBody": "Michael always comes through with style and creativity. He is the go to guy because of his responsiveness.",
+      "itemReviewed": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "publisher": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "name": "Google review",
+      "@id": "https://burkemedia.pro/reviews/#review-12"
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Antonio Baciu"
+      },
+      "reviewBody": "Doing a great job!",
+      "itemReviewed": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "publisher": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "name": "Google review",
+      "@id": "https://burkemedia.pro/reviews/#review-13"
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "miraclescalp.and.hairspa"
+      },
+      "reviewBody": "Very professional.",
+      "itemReviewed": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "publisher": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "name": "Google review",
+      "@id": "https://burkemedia.pro/reviews/#review-14"
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Russell Betts"
+      },
+      "reviewBody": "First rate.",
+      "itemReviewed": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "publisher": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "name": "Google review",
+      "@id": "https://burkemedia.pro/reviews/#review-15"
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Yelp reviewer"
+      },
+      "reviewBody": "Great company to deal with. Michael is a true pro at what he does and I will be referring business to him! Thanks for a great call today.",
+      "itemReviewed": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "publisher": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "name": "Yelp review",
+      "@id": "https://burkemedia.pro/reviews/#review-16"
     }
   ]
 }
 </script>
-<script data-breadcrumb-schema="true" type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://burkemedia.pro/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Reviews",
-      "item": "https://burkemedia.pro/reviews/"
-    }
-  ]
-}</script><meta name="theme-color" content="#4a76ba">
+
+<meta name="theme-color" content="#4a76ba">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">

@@ -23,7 +23,9 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;700;800&amp;family=Krona+One&amp;display=swap" rel="stylesheet"/>
 <link href="/assets/css/styles.css" rel="stylesheet"/>
-<script type="application/ld+json">{
+
+<script data-schema-upgrade="true" type="application/ld+json">
+{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -35,8 +37,72 @@
       "name": "BurkeMedia Productions",
       "url": "https://burkemedia.pro/",
       "logo": "https://burkemedia.pro/assets/img/bmp-logo-horizontal-white-higher-res.png",
+      "image": "https://burkemedia.pro/assets/img/coverimg-1.jpg",
+      "description": "BurkeMedia Productions provides web design, video production, photography, branding, SEO/AIO strategy, AI-assisted content, social media and business system integration for small businesses in Palm Desert and the Coachella Valley.",
       "telephone": "+1-760-660-1289",
-      "email": "hello@burkemedia.pro"
+      "email": "hello@burkemedia.pro",
+      "founder": {
+        "@type": "Person",
+        "name": "Michael Ray Burke"
+      },
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Palm Desert"
+        },
+        {
+          "@type": "Place",
+          "name": "Palm Springs"
+        },
+        {
+          "@type": "Place",
+          "name": "Coachella Valley"
+        },
+        {
+          "@type": "Place",
+          "name": "Indio"
+        },
+        {
+          "@type": "Place",
+          "name": "La Quinta"
+        },
+        {
+          "@type": "Place",
+          "name": "Cathedral City"
+        },
+        {
+          "@type": "Place",
+          "name": "Desert Hot Springs"
+        },
+        {
+          "@type": "Place",
+          "name": "Rancho Mirage"
+        },
+        {
+          "@type": "Place",
+          "name": "Indian Wells"
+        },
+        {
+          "@type": "Place",
+          "name": "Coachella"
+        },
+        {
+          "@type": "Place",
+          "name": "Southern California"
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Palm Desert",
+        "addressRegion": "CA",
+        "addressCountry": "US"
+      },
+      "sameAs": [
+        "https://www.facebook.com/burkemedia",
+        "https://www.instagram.com/burkemedia",
+        "https://www.youtube.com/@BurkemediaPro",
+        "https://x.com/burkemedia"
+      ]
     },
     {
       "@type": "WebSite",
@@ -45,6 +111,12 @@
       "name": "BurkeMedia Productions",
       "publisher": {
         "@id": "https://burkemedia.pro/#organization"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://burkemedia.pro/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
       }
     },
     {
@@ -53,34 +125,170 @@
       "url": "https://burkemedia.pro/blog/",
       "name": "Blog | BurkeMedia Productions",
       "description": "Articles and updates from BurkeMedia Productions about websites, branding, SEO, content, local business marketing and client stories.",
+      "image": "https://burkemedia.pro/assets/img/coverimg-1.jpg",
       "isPartOf": {
         "@id": "https://burkemedia.pro/#website"
       },
       "about": {
         "@id": "https://burkemedia.pro/#organization"
       },
+      "publisher": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
       "inLanguage": "en-US"
-    }
-  ]
-}</script>
-<script data-breadcrumb-schema="true" type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://burkemedia.pro/"
     },
     {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Blog",
-      "item": "https://burkemedia.pro/blog/"
+      "@type": "BreadcrumbList",
+      "@id": "https://burkemedia.pro/blog/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://burkemedia.pro/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://burkemedia.pro/blog/"
+        }
+      ]
+    },
+    {
+      "@type": "Blog",
+      "@id": "https://burkemedia.pro/blog/#blog",
+      "url": "https://burkemedia.pro/blog/",
+      "name": "BurkeMedia Blog",
+      "description": "Articles and updates from BurkeMedia Productions about websites, branding, SEO, content, local business marketing and client stories.",
+      "publisher": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "blogPost": [
+        {
+          "@type": "BlogPosting",
+          "url": "https://burkemedia.pro/blog/small-businesses-dont-have-to-feel-small-anymore-how-technology-and-ai-are-changing-the-game/",
+          "headline": "Promotion / Services Small Businesses Don’t Have to Feel Small Anymore: How Technology and AI Are Changing the Game A BurkeMedia perspective on how technology, automation and AI can help small businesses look bigger, communicate better and compete more confidently. February 7, 2026"
+        },
+        {
+          "@type": "BlogPosting",
+          "url": "https://burkemedia.pro/blog/building-a-blazing-fast-web-how-burkemedia-beats-the-big-guys-and-fixes-the-small/",
+          "headline": "Uncategorized Building a Blazing Fast Web — How BurkeMedia Beats the Big Guys and Fixes the Small A technical and practical look at why speed, structure and maintainability matter for modern small-business websites."
+        },
+        {
+          "@type": "BlogPosting",
+          "url": "https://burkemedia.pro/blog/small-business-saturday-2024/",
+          "headline": "Promotion Celebrate Small Business Saturday with BurkeMedia Productions: Supporting Local Businesses Like Ours! A Small Business Saturday message for local entrepreneurs and organizations that need stronger websites, content, apps, social media, branding or video. November 30, 2024"
+        },
+        {
+          "@type": "BlogPosting",
+          "url": "https://burkemedia.pro/blog/promoting-kidcraft-a-unique-fun-filled-event-for-local-kids/",
+          "headline": "Featured Client Promoting “KidCraft”: A Unique, Fun-Filled Event for Local Kids A featured-client blog post about promoting a creative local event for children and families."
+        },
+        {
+          "@type": "BlogPosting",
+          "url": "https://burkemedia.pro/blog/canyon-lanes-at-morongo-elevating-the-bowling-experience-with-digital-innovation/",
+          "headline": "Featured Client Canyon Lanes at Morongo: Elevating the Bowling Experience with Digital Innovation Website redevelopment, event functionality, video production and social media strategy for a major bowling and entertainment venue. August 14, 2024"
+        },
+        {
+          "@type": "BlogPosting",
+          "url": "https://burkemedia.pro/blog/how-to-set-up-your-business-google-business-profile-google-maps-listing/",
+          "headline": "Services / Tutorials and Ideas How to Set Up Your Business’ Google Business Profile & Google Maps Listing A practical Google Business Profile guide for small businesses that want to show up better in local search and Google Maps."
+        },
+        {
+          "@type": "BlogPosting",
+          "url": "https://burkemedia.pro/blog/why-its-important-to-get-your-coachella-valley-business-ready-for-the-season-now-dont-wait/",
+          "headline": "Promotion Why It’s Important To Get Your Coachella Valley Business Ready for the Season Now: Don’t Wait! A seasonal marketing reminder for Coachella Valley businesses preparing for visitors, snowbirds and the busy fall/winter season. August 11, 2024"
+        },
+        {
+          "@type": "BlogPosting",
+          "url": "https://burkemedia.pro/blog/revive-your-ride-platinum-auto-repair-and-collision-new-digital-presence-with-websites-apps-video-and-new-social-media-presence/",
+          "headline": "Featured Client Revive Your Ride: Platinum Auto Repair and Collision New Digital Presence with Websites, Apps, Video, and New Social Media Presence A featured client post about Platinum Auto Repair & Collision’s stronger digital presence, website, video and social media support."
+        },
+        {
+          "@type": "BlogPosting",
+          "url": "https://burkemedia.pro/blog/crafting-powerful-logos-our-approach-to-design-and-branding/",
+          "headline": "Services Crafting Powerful Logos: Our Approach to Design and Branding A look at BurkeMedia’s approach to logo design, brand identity, versatility and visual consistency across real client examples. August 6, 2024"
+        },
+        {
+          "@type": "BlogPosting",
+          "url": "https://burkemedia.pro/blog/client-spotlight-haskell-real-estate-mastering-property-management-in-the-pass-area/",
+          "headline": "Featured Client Client Spotlight: Haskell Real Estate – Mastering Property Management in the Pass Area A client spotlight focused on Haskell Real Estate’s property management presence and professional digital identity."
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://burkemedia.pro/blog/#itemlist",
+      "name": "BurkeMedia blog posts",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "url": "https://burkemedia.pro/blog/small-businesses-dont-have-to-feel-small-anymore-how-technology-and-ai-are-changing-the-game/",
+          "name": "Promotion / Services Small Businesses Don’t Have to Feel Small Anymore: How Technology and AI Are Changing the Game A BurkeMedia perspective on how technology, automation and AI can help small businesses look bigger, communicate better and compete more confidently. February 7, 2026"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "url": "https://burkemedia.pro/blog/building-a-blazing-fast-web-how-burkemedia-beats-the-big-guys-and-fixes-the-small/",
+          "name": "Uncategorized Building a Blazing Fast Web — How BurkeMedia Beats the Big Guys and Fixes the Small A technical and practical look at why speed, structure and maintainability matter for modern small-business websites."
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "url": "https://burkemedia.pro/blog/small-business-saturday-2024/",
+          "name": "Promotion Celebrate Small Business Saturday with BurkeMedia Productions: Supporting Local Businesses Like Ours! A Small Business Saturday message for local entrepreneurs and organizations that need stronger websites, content, apps, social media, branding or video. November 30, 2024"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "url": "https://burkemedia.pro/blog/promoting-kidcraft-a-unique-fun-filled-event-for-local-kids/",
+          "name": "Featured Client Promoting “KidCraft”: A Unique, Fun-Filled Event for Local Kids A featured-client blog post about promoting a creative local event for children and families."
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "url": "https://burkemedia.pro/blog/canyon-lanes-at-morongo-elevating-the-bowling-experience-with-digital-innovation/",
+          "name": "Featured Client Canyon Lanes at Morongo: Elevating the Bowling Experience with Digital Innovation Website redevelopment, event functionality, video production and social media strategy for a major bowling and entertainment venue. August 14, 2024"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "url": "https://burkemedia.pro/blog/how-to-set-up-your-business-google-business-profile-google-maps-listing/",
+          "name": "Services / Tutorials and Ideas How to Set Up Your Business’ Google Business Profile & Google Maps Listing A practical Google Business Profile guide for small businesses that want to show up better in local search and Google Maps."
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "url": "https://burkemedia.pro/blog/why-its-important-to-get-your-coachella-valley-business-ready-for-the-season-now-dont-wait/",
+          "name": "Promotion Why It’s Important To Get Your Coachella Valley Business Ready for the Season Now: Don’t Wait! A seasonal marketing reminder for Coachella Valley businesses preparing for visitors, snowbirds and the busy fall/winter season. August 11, 2024"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "url": "https://burkemedia.pro/blog/revive-your-ride-platinum-auto-repair-and-collision-new-digital-presence-with-websites-apps-video-and-new-social-media-presence/",
+          "name": "Featured Client Revive Your Ride: Platinum Auto Repair and Collision New Digital Presence with Websites, Apps, Video, and New Social Media Presence A featured client post about Platinum Auto Repair & Collision’s stronger digital presence, website, video and social media support."
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "url": "https://burkemedia.pro/blog/crafting-powerful-logos-our-approach-to-design-and-branding/",
+          "name": "Services Crafting Powerful Logos: Our Approach to Design and Branding A look at BurkeMedia’s approach to logo design, brand identity, versatility and visual consistency across real client examples. August 6, 2024"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "url": "https://burkemedia.pro/blog/client-spotlight-haskell-real-estate-mastering-property-management-in-the-pass-area/",
+          "name": "Featured Client Client Spotlight: Haskell Real Estate – Mastering Property Management in the Pass Area A client spotlight focused on Haskell Real Estate’s property management presence and professional digital identity."
+        }
+      ]
     }
   ]
-}</script><meta name="theme-color" content="#4a76ba">
+}
+</script>
+
+<meta name="theme-color" content="#4a76ba">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">

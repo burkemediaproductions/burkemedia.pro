@@ -23,7 +23,9 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;700;800&amp;family=Krona+One&amp;display=swap" rel="stylesheet"/>
 <link href="/assets/css/styles.css" rel="stylesheet"/>
-<script type="application/ld+json">{
+
+<script data-schema-upgrade="true" type="application/ld+json">
+{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -33,7 +35,128 @@
       ],
       "@id": "https://burkemedia.pro/#organization",
       "name": "BurkeMedia Productions",
-      "url": "https://burkemedia.pro/"
+      "url": "https://burkemedia.pro/",
+      "logo": "https://burkemedia.pro/assets/img/bmp-logo-horizontal-white-higher-res.png",
+      "image": "https://burkemedia.pro/assets/img/coverimg-1.jpg",
+      "description": "BurkeMedia Productions provides web design, video production, photography, branding, SEO/AIO strategy, AI-assisted content, social media and business system integration for small businesses in Palm Desert and the Coachella Valley.",
+      "telephone": "+1-760-660-1289",
+      "email": "hello@burkemedia.pro",
+      "founder": {
+        "@type": "Person",
+        "name": "Michael Ray Burke"
+      },
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Palm Desert"
+        },
+        {
+          "@type": "Place",
+          "name": "Palm Springs"
+        },
+        {
+          "@type": "Place",
+          "name": "Coachella Valley"
+        },
+        {
+          "@type": "Place",
+          "name": "Indio"
+        },
+        {
+          "@type": "Place",
+          "name": "La Quinta"
+        },
+        {
+          "@type": "Place",
+          "name": "Cathedral City"
+        },
+        {
+          "@type": "Place",
+          "name": "Desert Hot Springs"
+        },
+        {
+          "@type": "Place",
+          "name": "Rancho Mirage"
+        },
+        {
+          "@type": "Place",
+          "name": "Indian Wells"
+        },
+        {
+          "@type": "Place",
+          "name": "Coachella"
+        },
+        {
+          "@type": "Place",
+          "name": "Southern California"
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Palm Desert",
+        "addressRegion": "CA",
+        "addressCountry": "US"
+      },
+      "sameAs": [
+        "https://www.facebook.com/burkemedia",
+        "https://www.instagram.com/burkemedia",
+        "https://www.youtube.com/@BurkemediaPro",
+        "https://x.com/burkemedia"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://burkemedia.pro/#website",
+      "url": "https://burkemedia.pro/",
+      "name": "BurkeMedia Productions",
+      "publisher": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://burkemedia.pro/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://burkemedia.pro/faq/#webpage",
+      "url": "https://burkemedia.pro/faq/",
+      "name": "FAQ | BurkeMedia Productions",
+      "description": "Frequently asked questions about BurkeMedia websites, video, SEO/AIO, AI consulting, branding, content and digital systems.",
+      "image": "https://burkemedia.pro/assets/img/coverimg-1.jpg",
+      "isPartOf": {
+        "@id": "https://burkemedia.pro/#website"
+      },
+      "about": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "publisher": {
+        "@id": "https://burkemedia.pro/#organization"
+      },
+      "inLanguage": "en-US",
+      "mainEntity": {
+        "@id": "https://burkemedia.pro/faq/#faq"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://burkemedia.pro/faq/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://burkemedia.pro/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Frequently Asked Questions",
+          "item": "https://burkemedia.pro/faq/"
+        }
+      ]
     },
     {
       "@type": "FAQPage",
@@ -41,7 +164,7 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "I know I need better marketing, but I am not sure where to start. Can you help?",
+          "name": "FAQ I know I need better marketing, but I am not sure where to start. Can you help?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Yes. We can start with a practical audit of your website, content, Google presence, social media, SEO, AI visibility and workflow. From there, we map the most useful next steps instead of overwhelming you with everything at once."
@@ -49,7 +172,7 @@
         },
         {
           "@type": "Question",
-          "name": "Can you build or rebuild my website if I do not have the copy ready?",
+          "name": "FAQ Can you build or rebuild my website if I do not have the copy ready?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Yes. We can interview you, organize your services, capture real photos and video, and turn what you already know into clear website copy, page sections, FAQs, calls-to-action and future content ideas."
@@ -57,7 +180,7 @@
         },
         {
           "@type": "Question",
-          "name": "Do you handle the photos and videos for the website too?",
+          "name": "FAQ Do you handle the photos and videos for the website too?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Yes. BurkeMedia can plan and capture the visual content your website needs, including team photos, service photos, b-roll, interviews, short background videos and content that can also be used for social media and Google Business updates."
@@ -65,7 +188,7 @@
         },
         {
           "@type": "Question",
-          "name": "How do SEO and AIO fit into a new website?",
+          "name": "FAQ How do SEO and AIO fit into a new website?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "We structure pages around the services, locations, questions and proof that real customers search for. That includes stronger page copy, headings, FAQs, schema, local content and helpful answers that support both traditional search and AI-assisted discovery."
@@ -73,7 +196,7 @@
         },
         {
           "@type": "Question",
-          "name": "Can one shoot really turn into multiple pieces of content?",
+          "name": "FAQ Can one shoot really turn into multiple pieces of content?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Yes. A planned shoot can support website visuals, homepage video clips, service page content, reels, testimonial clips, Google Business posts, YouTube content, blog ideas and future campaigns."
@@ -81,7 +204,7 @@
         },
         {
           "@type": "Question",
-          "name": "Do you help with branding, logos or the overall look of the business?",
+          "name": "FAQ Do you help with branding, logos or the overall look of the business?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Yes. We can help with brand refreshes, logo cleanup, colors, typography, graphics, flyers, social templates and the visual direction needed to make the website and content feel consistent."
@@ -89,7 +212,7 @@
         },
         {
           "@type": "Question",
-          "name": "Can you connect the website to forms, leads and automation?",
+          "name": "FAQ Can you connect the website to forms, leads and automation?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Yes. We can connect websites to contact forms, lead tracking, email notifications, booking links, CRMs, follow-up workflows and future ServiceUp-powered systems where it makes sense."
@@ -97,7 +220,7 @@
         },
         {
           "@type": "Question",
-          "name": "Do you train businesses to use AI without sounding robotic?",
+          "name": "FAQ Do you train businesses to use AI without sounding robotic?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Yes. We help business owners and teams use AI responsibly for planning, brainstorming, drafting, repurposing and organizing content while keeping the final voice human, local and accurate."
@@ -105,7 +228,7 @@
         },
         {
           "@type": "Question",
-          "name": "What types of businesses does BurkeMedia usually work with?",
+          "name": "FAQ What types of businesses does BurkeMedia usually work with?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "We work with local and service-based businesses including restaurants, auto repair shops, martial arts schools, fitness studios, counseling centers, surrogacy agencies, real estate teams, home service companies, nonprofits and community organizations."
@@ -113,7 +236,7 @@
         },
         {
           "@type": "Question",
-          "name": "What does starting a project with BurkeMedia usually look like?",
+          "name": "FAQ What does starting a project with BurkeMedia usually look like?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "It usually starts with a conversation. We talk through what is working, what is not, what you already have, what needs to be created, and what would make the biggest difference first. Then we build a realistic plan around your website, content, video, SEO/AIO and systems."
@@ -122,25 +245,10 @@
       ]
     }
   ]
-}</script>
-<script data-breadcrumb-schema="true" type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://burkemedia.pro/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "FAQ",
-      "item": "https://burkemedia.pro/faq/"
-    }
-  ]
-}</script><meta name="theme-color" content="#4a76ba">
+}
+</script>
+
+<meta name="theme-color" content="#4a76ba">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
