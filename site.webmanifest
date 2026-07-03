@@ -1,0 +1,19 @@
+{
+  "name": "BurkeMedia Productions",
+  "short_name": "BurkeMedia",
+  "icons": [
+    {
+      "src": "/assets/favicon/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/favicon/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#4a76ba",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}

@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="noindex,follow" name="robots"/>
+<title>404 Pong | Page Not Found | BurkeMedia Productions</title>
+<meta content="This BurkeMedia page was not found, but you can play a quick round of 404 Pong and get back to the main site." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;700;800&amp;family=Krona+One&amp;display=swap" rel="stylesheet"/>
+<link href="/assets/css/styles.css" rel="stylesheet"/>
+<style>
+    body.error-page {
+      min-height: 100vh;
+      background: #071013;
+      overflow-x: hidden;
+    }
+
+    .error-pong-page {
+      position: relative;
+      min-height: 100svh;
+      padding: clamp(118px, 12vw, 160px) 0 clamp(70px, 9vw, 110px);
+      overflow: hidden;
+      isolation: isolate;
+      background:
+        radial-gradient(circle at 16% 22%, rgba(74,118,186,.28), transparent 32%),
+        radial-gradient(circle at 84% 20%, rgba(243,120,33,.22), transparent 30%),
+        radial-gradient(circle at 50% 90%, rgba(74,118,186,.14), transparent 34%),
+        #071013;
+    }
+
+    .error-pong-page::before {
+      content: "404  PONG  PAGE  NOT  FOUND";
+      position: absolute;
+      left: 50%;
+      top: 48%;
+      z-index: -2;
+      width: 130%;
+      transform: translate(-50%, -50%);
+      color: rgba(255,255,255,.035);
+      font-family: var(--font-heading);
+      font-size: clamp(54px, 9vw, 150px);
+      letter-spacing: .14em;
+      line-height: 1;
+      text-align: center;
+      white-space: nowrap;
+      pointer-events: none;
+    }
+
+    .error-pong-page::after {
+      content: "";
+      position: absolute;
+      inset: -14%;
+      z-index: -3;
+      opacity: .14;
+      background-image:
+        linear-gradient(rgba(255,255,255,.22) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.22) 1px, transparent 1px);
+      background-size: 76px 76px;
+      mask-image: radial-gradient(circle at center, #000 0%, #000 42%, transparent 78%);
+      animation: errorGridDrift 22s linear infinite;
+      pointer-events: none;
+    }
+
+    .error-layout {
+      display: grid;
+      grid-template-columns: minmax(0, .82fr) minmax(420px, 1.18fr);
+      gap: clamp(28px, 5vw, 70px);
+      align-items: center;
+    }
+
+    .error-copy {
+      position: relative;
+      z-index: 2;
+    }
+
+    .error-copy .eyebrow {
+      color: var(--color-warm);
+    }
+
+    .error-copy h1 {
+      margin-inline: 0;
+      max-width: 800px;
+      font-size: clamp(38px, 5.5vw, 76px);
+    }
+
+    .error-copy p {
+      max-width: 640px;
+      color: rgba(255,255,255,.82);
+      font-size: clamp(18px, 2vw, 22px);
+    }
+
+    .error-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .pong-shell {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 28px;
+      background:
+        radial-gradient(circle at 20% 0%, rgba(74,118,186,.18), transparent 36%),
+        linear-gradient(180deg, rgba(255,255,255,.105), rgba(255,255,255,.052));
+      box-shadow: 0 30px 90px rgba(0,0,0,.38);
+      backdrop-filter: blur(14px);
+    }
+
+    .pong-topbar {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 12px;
+      align-items: center;
+      padding: 18px 20px;
+      border-bottom: 1px solid rgba(255,255,255,.14);
+      background: rgba(7,16,19,.48);
+    }
+
+    .pong-label {
+      color: rgba(255,255,255,.74);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .12em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .pong-label:last-child {
+      text-align: right;
+    }
+
+    .pong-score {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 98px;
+      min-height: 48px;
+      padding: 8px 14px;
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 999px;
+      background: rgba(255,255,255,.10);
+      color: #fff;
+      font-family: var(--font-heading);
+      font-size: 22px;
+      line-height: 1;
+    }
+
+    .pong-canvas-wrap {
+      position: relative;
+      padding: clamp(12px, 2vw, 20px);
+    }
+
+    #pong404 {
+      display: block;
+      width: 100%;
+      height: min(58vh, 440px);
+      min-height: 300px;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 20px;
+      background: #050c10;
+      touch-action: none;
+      box-shadow: inset 0 0 70px rgba(74,118,186,.16);
+    }
+
+    .pong-start-card {
+      position: absolute;
+      inset: clamp(26px, 5vw, 58px);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 24px;
+      border: 1px solid rgba(255,255,255,.20);
+      border-radius: 22px;
+      background: rgba(7,16,19,.78);
+      box-shadow: 0 24px 80px rgba(0,0,0,.34);
+      backdrop-filter: blur(14px);
+      transition: opacity .2s ease, visibility .2s ease;
+    }
+
+    .pong-start-card.is-hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .pong-start-card h2 {
+      margin-bottom: 10px;
+      font-size: clamp(25px, 3vw, 38px);
+    }
+
+    .pong-start-card p {
+      max-width: 520px;
+      margin-inline: auto;
+      color: rgba(255,255,255,.80);
+    }
+
+    .pong-help {
+      display: grid;
+      gap: 6px;
+      padding: 0 20px 20px;
+      color: rgba(255,255,255,.70);
+      font-size: 15px;
+      line-height: 1.45;
+      text-align: center;
+    }
+
+    .pong-message {
+      color: #fff;
+      font-weight: 900;
+    }
+
+    @keyframes errorGridDrift {
+      from { transform: translate3d(0, 0, 0); }
+      to { transform: translate3d(76px, 76px, 0); }
+    }
+
+    @media (max-width: 980px) {
+      .error-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .pong-shell {
+        max-width: 760px;
+        width: 100%;
+        margin-inline: auto;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .error-pong-page {
+        padding-top: 104px;
+      }
+
+      .error-actions {
+        display: grid;
+      }
+
+      .pong-topbar {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .pong-label:last-child {
+        text-align: center;
+      }
+
+      #pong404 {
+        min-height: 260px;
+        height: 52vh;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .error-pong-page::after {
+        animation: none;
+      }
+    }
+  </style>
+<meta name="theme-color" content="#4a76ba">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon/favicon-48x48.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="msapplication-TileColor" content="#4a76ba">
+<meta name="msapplication-config" content="/browserconfig.xml">
+</head>
+<body class="error-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header is-scrolled" data-header=""><div class="container header-inner"><a aria-label="BurkeMedia Productions home" class="brand" href="/"><img alt="BurkeMedia Productions" height="86" src="/assets/img/bmp-logo-horizontal-white-higher-res.webp" width="420"/></a><button aria-controls="primary-navigation" aria-expanded="false" class="menu-toggle" data-menu-toggle="" type="button"><span aria-hidden="true" class="menu-toggle-lines"></span><span class="sr-only">Menu</span></button><nav aria-label="Primary navigation" class="primary-nav" data-nav="" id="primary-navigation">
+<a class="mobile-home-link" href="/">Home</a><a href="/services/">Services</a><a href="/work/">Work</a><a href="/reviews/">Reviews</a><a href="/industries/">Industries</a><a href="/locations/">Locations</a><div class="nav-more" data-nav-more=""><button aria-expanded="false" class="nav-more-toggle" data-nav-more-toggle="" type="button">More</button><div class="nav-more-menu" data-nav-more-menu=""><a href="/about/">About BurkeMedia</a><a href="/team/">Team</a><a href="/process/">Process</a><a href="/insights/">Insights</a><a href="/blog/">Blog</a><a href="/faq/">FAQ</a></div></div><a class="nav-cta" href="/contact/">Contact</a></nav></div></header>
+<main class="error-pong-page" id="main-content">
+<div class="container error-layout">
+<section class="error-copy reveal">
+<p class="eyebrow">404 — Page not found</p>
+<h1>That page took a bad bounce.</h1>
+<p>Looks like this link missed the paddle. While we get you back into play, try a quick round of BurkeMedia Pong.</p>
+<div class="error-actions">
+<a class="button primary" href="/">Back to Home</a>
+<a class="button secondary" href="/work/">View Our Work</a>
+<a class="button ghost" href="/contact/">Start a Project</a>
+</div>
+</section>
+<section aria-labelledby="pong-title" class="pong-shell reveal">
+<div aria-live="polite" class="pong-topbar">
+<span class="pong-label">You</span>
+<span class="pong-score"><span id="pongPlayerScore">0</span> : <span id="pong404Score">0</span></span>
+<span class="pong-label">The Missing Page</span>
+</div>
+<div class="pong-canvas-wrap">
+<canvas aria-label="Playable 404 Pong game" height="520" id="pong404" width="900"></canvas>
+<div class="pong-start-card" data-pong-start-card="">
+<div>
+<p class="eyebrow">Mini game</p>
+<h2 id="pong-title">404 Pong</h2>
+<p>Move your paddle and keep the missing page from getting past you.</p>
+<button class="button primary" data-pong-start="" type="button">Serve the Page</button>
+</div>
+</div>
+</div>
+<div class="pong-help">
+<span class="pong-message" data-pong-message="">Use your mouse, touch, or ↑ ↓ keys to move.</span>
+<span>First to 5 wins. Refreshing is optional. Escaping to the homepage is highly encouraged.</span>
+</div>
+</section>
+</div>
+</main>
+<script defer="" src="/assets/js/main.js"></script>
+<script>
+    (function () {
+      const canvas = document.getElementById('pong404');
+      const startButton = document.querySelector('[data-pong-start]');
+      const startCard = document.querySelector('[data-pong-start-card]');
+      const message = document.querySelector('[data-pong-message]');
+      const playerScoreEl = document.getElementById('pongPlayerScore');
+      const pageScoreEl = document.getElementById('pong404Score');
+
+      if (!canvas || !startButton) return;
+
+      const ctx = canvas.getContext('2d');
+      const state = {
+        running: false,
+        playerScore: 0,
+        pageScore: 0,
+        keys: { up: false, down: false },
+        player: { x: 28, y: 0, w: 12, h: 86, speed: 8 },
+        page: { x: 0, y: 0, w: 12, h: 86, speed: 5.6 },
+        ball: { x: 0, y: 0, r: 8, vx: 5.4, vy: 3.2 },
+        lastTime: 0
+      };
+
+      function resizeCanvas() {
+        const rect = canvas.getBoundingClientRect();
+        const dpr = window.devicePixelRatio || 1;
+        canvas.width = Math.max(320, Math.round(rect.width * dpr));
+        canvas.height = Math.max(240, Math.round(rect.height * dpr));
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        resetPositions(false);
+        draw();
+      }
+
+      function getSize() {
+        return { w: canvas.clientWidth, h: canvas.clientHeight };
+      }
+
+      function resetPositions(randomDirection) {
+        const { w, h } = getSize();
+        state.player.h = Math.max(64, Math.min(104, h * 0.23));
+        state.page.h = state.player.h;
+        state.player.y = Math.max(0, Math.min(h - state.player.h, state.player.y || h / 2 - state.player.h / 2));
+        state.page.x = w - 40;
+        state.page.y = Math.max(0, Math.min(h - state.page.h, state.page.y || h / 2 - state.page.h / 2));
+        state.ball.x = w / 2;
+        state.ball.y = h / 2;
+        const direction = randomDirection ? (Math.random() > 0.5 ? 1 : -1) : Math.sign(state.ball.vx || 1);
+        const speed = Math.max(4.6, Math.min(6.8, w / 120));
+        state.ball.vx = speed * direction;
+        state.ball.vy = (Math.random() * 3.8 + 2.1) * (Math.random() > 0.5 ? 1 : -1);
+      }
+
+      function drawNet(w, h) {
+        ctx.fillStyle = 'rgba(255,255,255,.22)';
+        const dashHeight = 18;
+        for (let y = 18; y < h; y += dashHeight * 2) {
+          ctx.fillRect(w / 2 - 1, y, 2, dashHeight);
+        }
+      }
+
+      function draw() {
+        const { w, h } = getSize();
+        ctx.clearRect(0, 0, w, h);
+
+        const gradient = ctx.createLinearGradient(0, 0, w, h);
+        gradient.addColorStop(0, '#071013');
+        gradient.addColorStop(0.52, '#0b1b24');
+        gradient.addColorStop(1, '#16243b');
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, w, h);
+
+        drawNet(w, h);
+
+        ctx.fillStyle = 'rgba(74,118,186,.16)';
+        ctx.beginPath();
+        ctx.arc(w * 0.18, h * 0.20, 110, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = 'rgba(243,120,33,.14)';
+        ctx.beginPath();
+        ctx.arc(w * 0.82, h * 0.80, 130, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = '#f7fbfc';
+        roundRect(state.player.x, state.player.y, state.player.w, state.player.h, 8);
+        ctx.fill();
+
+        ctx.fillStyle = '#f37821';
+        roundRect(state.page.x, state.page.y, state.page.w, state.page.h, 8);
+        ctx.fill();
+
+        ctx.fillStyle = '#ffffff';
+        ctx.shadowColor = 'rgba(243,120,33,.65)';
+        ctx.shadowBlur = 18;
+        ctx.beginPath();
+        ctx.arc(state.ball.x, state.ball.y, state.ball.r, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.shadowBlur = 0;
+      }
+
+      function roundRect(x, y, width, height, radius) {
+        const r = Math.min(radius, width / 2, height / 2);
+        ctx.beginPath();
+        ctx.moveTo(x + r, y);
+        ctx.arcTo(x + width, y, x + width, y + height, r);
+        ctx.arcTo(x + width, y + height, x, y + height, r);
+        ctx.arcTo(x, y + height, x, y, r);
+        ctx.arcTo(x, y, x + width, y, r);
+        ctx.closePath();
+      }
+
+      function update(dt) {
+        const { w, h } = getSize();
+        const speedScale = dt / 16.67;
+
+        if (state.keys.up) state.player.y -= state.player.speed * speedScale;
+        if (state.keys.down) state.player.y += state.player.speed * speedScale;
+        state.player.y = Math.max(0, Math.min(h - state.player.h, state.player.y));
+
+        const pageCenter = state.page.y + state.page.h / 2;
+        const target = state.ball.y;
+        const aiLag = Math.max(-state.page.speed, Math.min(state.page.speed, target - pageCenter));
+        state.page.y += aiLag * speedScale;
+        state.page.y = Math.max(0, Math.min(h - state.page.h, state.page.y));
+
+        state.ball.x += state.ball.vx * speedScale;
+        state.ball.y += state.ball.vy * speedScale;
+
+        if (state.ball.y - state.ball.r < 0 || state.ball.y + state.ball.r > h) {
+          state.ball.vy *= -1;
+          state.ball.y = Math.max(state.ball.r, Math.min(h - state.ball.r, state.ball.y));
+        }
+
+        checkPaddleCollision(state.player, 1);
+        checkPaddleCollision(state.page, -1);
+
+        if (state.ball.x < -30) {
+          state.pageScore += 1;
+          pageScoreEl.textContent = state.pageScore;
+          message.textContent = 'The missing page scored. Serve again and win it back.';
+          stopRound();
+          state.ball.vx = Math.abs(state.ball.vx);
+          resetPositions(false);
+        }
+
+        if (state.ball.x > w + 30) {
+          state.playerScore += 1;
+          playerScoreEl.textContent = state.playerScore;
+          message.textContent = 'Nice save. You sent that broken link back where it came from.';
+          stopRound();
+          state.ball.vx = -Math.abs(state.ball.vx);
+          resetPositions(false);
+        }
+
+        if (state.playerScore >= 5 || state.pageScore >= 5) {
+          const won = state.playerScore > state.pageScore;
+          message.textContent = won ? 'You fixed the bounce. Nice work.' : 'The 404 won this round, but the homepage is still undefeated.';
+          state.playerScore = 0;
+          state.pageScore = 0;
+          playerScoreEl.textContent = '0';
+          pageScoreEl.textContent = '0';
+        }
+      }
+
+      function checkPaddleCollision(paddle, direction) {
+        const ball = state.ball;
+        const hitsX = direction > 0
+          ? ball.x - ball.r <= paddle.x + paddle.w && ball.x > paddle.x
+          : ball.x + ball.r >= paddle.x && ball.x < paddle.x + paddle.w;
+        const hitsY = ball.y + ball.r >= paddle.y && ball.y - ball.r <= paddle.y + paddle.h;
+
+        if (!hitsX || !hitsY) return;
+
+        const paddleCenter = paddle.y + paddle.h / 2;
+        const offset = (ball.y - paddleCenter) / (paddle.h / 2);
+        const currentSpeed = Math.min(9.2, Math.abs(ball.vx) + 0.28);
+        ball.vx = currentSpeed * direction;
+        ball.vy = offset * 5.3;
+        ball.x = direction > 0 ? paddle.x + paddle.w + ball.r : paddle.x - ball.r;
+      }
+
+      function loop(time) {
+        if (!state.running) {
+          draw();
+          return;
+        }
+        const dt = state.lastTime ? time - state.lastTime : 16.67;
+        state.lastTime = time;
+        update(Math.min(34, dt));
+        draw();
+        window.requestAnimationFrame(loop);
+      }
+
+      function startRound() {
+        startCard.classList.add('is-hidden');
+        message.textContent = 'Game on. Keep the 404 from slipping past.';
+        if (!state.running) {
+          state.running = true;
+          state.lastTime = 0;
+          window.requestAnimationFrame(loop);
+        }
+      }
+
+      function stopRound() {
+        state.running = false;
+        startCard.classList.remove('is-hidden');
+        startButton.textContent = 'Serve Again';
+      }
+
+      function setPlayerFromPointer(event) {
+        const rect = canvas.getBoundingClientRect();
+        const clientY = event.touches ? event.touches[0].clientY : event.clientY;
+        const y = clientY - rect.top - state.player.h / 2;
+        state.player.y = Math.max(0, Math.min(rect.height - state.player.h, y));
+      }
+
+      startButton.addEventListener('click', startRound);
+      canvas.addEventListener('mousemove', setPlayerFromPointer);
+      canvas.addEventListener('touchstart', (event) => { setPlayerFromPointer(event); startRound(); }, { passive: true });
+      canvas.addEventListener('touchmove', setPlayerFromPointer, { passive: true });
+
+      window.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowUp') { state.keys.up = true; event.preventDefault(); }
+        if (event.key === 'ArrowDown') { state.keys.down = true; event.preventDefault(); }
+        if (event.key === ' ' && !state.running) { startRound(); event.preventDefault(); }
+      });
+
+      window.addEventListener('keyup', (event) => {
+        if (event.key === 'ArrowUp') state.keys.up = false;
+        if (event.key === 'ArrowDown') state.keys.down = false;
+      });
+
+      window.addEventListener('resize', resizeCanvas);
+      resizeCanvas();
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+# Netlify redirects for BurkeMedia migration
+# Old live WordPress post URLs -> new Blog structure
+/small-businesses-dont-have-to-feel-small-anymore-how-technology-and-ai-are-changing-the-game/ /blog/small-businesses-dont-have-to-feel-small-anymore-how-technology-and-ai-are-changing-the-game/ 301
+/building-a-blazing-fast-web-how-burkemedia-beats-the-big-guys-and-fixes-the-small/ /blog/building-a-blazing-fast-web-how-burkemedia-beats-the-big-guys-and-fixes-the-small/ 301
+/small-business-saturday-2024/ /blog/small-business-saturday-2024/ 301
+/promoting-kidcraft-a-unique-fun-filled-event-for-local-kids/ /blog/promoting-kidcraft-a-unique-fun-filled-event-for-local-kids/ 301
+/canyon-lanes-at-morongo-elevating-the-bowling-experience-with-digital-innovation/ /blog/canyon-lanes-at-morongo-elevating-the-bowling-experience-with-digital-innovation/ 301
+/how-to-set-up-your-business-google-business-profile-google-maps-listing/ /blog/how-to-set-up-your-business-google-business-profile-google-maps-listing/ 301
+/why-its-important-to-get-your-coachella-valley-business-ready-for-the-season-now-dont-wait/ /blog/why-its-important-to-get-your-coachella-valley-business-ready-for-the-season-now-dont-wait/ 301
+/revive-your-ride-platinum-auto-repair-and-collision-new-digital-presence-with-websites-apps-video-and-new-social-media-presence/ /blog/revive-your-ride-platinum-auto-repair-and-collision-new-digital-presence-with-websites-apps-video-and-new-social-media-presence/ 301
+/crafting-powerful-logos-our-approach-to-design-and-branding/ /blog/crafting-powerful-logos-our-approach-to-design-and-branding/ 301
+/client-spotlight-haskell-real-estate-mastering-property-management-in-the-pass-area/ /blog/client-spotlight-haskell-real-estate-mastering-property-management-in-the-pass-area/ 301
+
+# Old service/navigation URLs -> new service/contact structure
+/branding-graphics/ /services/branding-graphic-design/ 301
+/branding-and-graphics/ /services/branding-graphic-design/ 301
+/branding-graphic-design/ /services/branding-graphic-design/ 301
+/web-development/ /services/web-development/ 301
+/web-design/ /services/web-development/ 301
+/website-design/ /services/web-development/ 301
+/video-production/ /services/video-production/ 301
+/photography/ /services/photography/ 301
+/social-media/ /services/social-media-content/ 301
+/social-media-content/ /services/social-media-content/ 301
+/seo/ /services/seo-aio-strategy/ 301
+/seo-aio/ /services/seo-aio-strategy/ 301
+/ai-consulting/ /services/ai-consulting-training/ 301
+/automation/ /services/crm-automation/ 301
+/crm-automation/ /services/crm-automation/ 301
+/content-creation/ /services/content-creation/ 301
+/lets-have-coffee/ /contact/ 301
+/lets-have-coffee-with-burkemedia/ /contact/ 301
+/free-consultation/ /contact/ 301
+/start-a-project/ /contact/ 301
+
+# Old people/company variations
+/team-members/ /team/ 301
+/our-team/ /team/ 301
+/about-us/ /about/ 301
+/about-burkemedia/ /about/ 301
+/about-burkemedia-productions/ /about/ 301
+
+# WordPress archive/system URLs -> useful static destinations
+/category/* /blog/ 301
+/tag/* /blog/ 301
+/author/* /blog/ 301
+/blog/page/* /blog/ 301
+/feed/ /blog/ 301
+/comments/feed/ /blog/ 301
+/wp-json/ / 301
+/wp-json/* / 301
+/xmlrpc.php / 301
+
+# Legacy WordPress media paths for blog images are preserved as static files where available.
+
+# Final fallback
+/* /404.html 404
