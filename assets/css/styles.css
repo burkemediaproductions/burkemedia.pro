@@ -3210,3 +3210,33 @@ textarea { resize: vertical; }
     min-height: 470px;
   }
 }
+
+/* SEO/AIO internal link sections */
+.inline-link-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .75rem;
+  margin-top: 1.25rem;
+}
+
+.inline-link-list a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: .7rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(73, 118, 186, .22);
+  background: rgba(255, 255, 255, .72);
+  color: var(--color-primary-dark);
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 12px 30px rgba(18, 39, 74, .08);
+}
+
+.inline-link-list a:hover,
+.inline-link-list a:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(225, 130, 62, .42);
+  color: var(--color-warm);
+}
