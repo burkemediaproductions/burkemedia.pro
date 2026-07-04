@@ -3240,3 +3240,44 @@ textarea { resize: vertical; }
   border-color: rgba(225, 130, 62, .42);
   color: var(--color-warm);
 }
+
+
+/* Victor's Mexican Food social media case study section */
+.social-proof-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.social-proof-copy h2 {
+  max-width: 760px;
+}
+
+.instagram-embed-card {
+  padding: clamp(1rem, 2vw, 1.5rem);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, .86);
+  box-shadow: 0 24px 70px rgba(18, 39, 74, .12);
+}
+
+.instagram-embed-card .instagram-media {
+  margin: 0 auto !important;
+  min-width: min(326px, 100%) !important;
+  width: 100% !important;
+}
+
+@media (max-width: 980px) {
+  .social-proof-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  .instagram-embed-card {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding: .75rem;
+    border-radius: 20px;
+  }
+}
