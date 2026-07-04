@@ -3241,6 +3241,145 @@ textarea { resize: vertical; }
   color: var(--color-warm);
 }
 
+/* Victor's Mexican Food case study media additions */
+.victors-brand-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, .85fr);
+  gap: 28px;
+  align-items: center;
+}
+
+.victors-brand-copy {
+  max-width: 760px;
+}
+
+.victors-logo-card,
+.media-card,
+.gallery-item {
+  background: #fff;
+  border: 1px solid rgba(8,23,28,.12);
+  border-radius: var(--radius);
+  box-shadow: 0 18px 45px rgba(3,19,24,.08);
+  overflow: hidden;
+}
+
+.victors-logo-card {
+  padding: 28px;
+  text-align: center;
+}
+
+.victors-logo-card img {
+  display: block;
+  width: min(100%, 420px);
+  height: auto;
+  margin: 0 auto 18px;
+}
+
+.victors-logo-card p,
+.gallery-item figcaption {
+  margin: 0;
+  color: #4a5a62;
+  font-size: 15px;
+}
+
+.media-showcase-section .section-heading p {
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.video-embed-grid,
+.website-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.responsive-embed {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: #071013;
+}
+
+.responsive-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.media-card {
+  display: flex;
+  flex-direction: column;
+  color: #122027;
+}
+
+.media-card video {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #071013;
+}
+
+.media-card-copy {
+  padding: 24px;
+}
+
+.media-card-copy .tag {
+  color: var(--color-primary-dark);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  font-weight: 900;
+}
+
+.media-card-copy p {
+  color: #4a5a62;
+}
+
+.website-preview-card.is-phone {
+  max-width: 420px;
+  margin-inline: auto;
+}
+
+.photo-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.gallery-item {
+  margin: 0;
+  color: #122027;
+}
+
+.gallery-item.wide {
+  grid-column: 1 / -1;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.gallery-item figcaption {
+  padding: 16px 18px 18px;
+}
+
+@media (max-width: 900px) {
+  .victors-brand-grid,
+  .video-embed-grid,
+  .website-preview-grid,
+  .photo-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .website-preview-card.is-phone {
+    max-width: none;
+  }
+}
+
 
 /* Victor's Mexican Food social media case study section */
 .social-proof-layout {
