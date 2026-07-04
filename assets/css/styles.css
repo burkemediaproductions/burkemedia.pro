@@ -3464,3 +3464,23 @@ body {
     visibility: visible;
   }
 }
+
+
+/* Project blog deep-dive additions */
+.project-blog-deep-dive .split.no-pad {
+  padding-left: 0;
+  padding-right: 0;
+}
+.project-blog-deep-dive .mini-heading {
+  margin-top: 3rem;
+}
+.project-blog-deep-dive .article-video-embed {
+  margin: 0;
+}
+.project-crosslinks {
+  margin-top: 2.5rem;
+}
+.project-proof-grid,
+.project-video-grid {
+  margin-top: 2rem;
+}
