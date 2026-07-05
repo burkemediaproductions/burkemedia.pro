@@ -12,6 +12,23 @@
 /client-spotlight-haskell-real-estate-mastering-property-management-in-the-pass-area/ /blog/client-spotlight-haskell-real-estate-mastering-property-management-in-the-pass-area/ 301
 
 # Old service/navigation URLs -> new service/contact structure
+
+# Old WordPress /service/ URLs -> new /services/ pages
+/service/web-development /services/web-development/ 301
+/service/web-development/ /services/web-development/ 301
+/service/photography /services/photography/ 301
+/service/photography/ /services/photography/ 301
+/service/video-production /services/video-production/ 301
+/service/video-production/ /services/video-production/ 301
+/service/graphic-design /services/branding-graphic-design/ 301
+/service/graphic-design/ /services/branding-graphic-design/ 301
+/service/branding-graphic-design /services/branding-graphic-design/ 301
+/service/branding-graphic-design/ /services/branding-graphic-design/ 301
+/service/branding-graphics /services/branding-graphic-design/ 301
+/service/branding-graphics/ /services/branding-graphic-design/ 301
+/service/branding-and-graphics /services/branding-graphic-design/ 301
+/service/branding-and-graphics/ /services/branding-graphic-design/ 301
+
 /branding-graphics/ /services/branding-graphic-design/ 301
 /branding-and-graphics/ /services/branding-graphic-design/ 301
 /branding-graphic-design/ /services/branding-graphic-design/ 301
