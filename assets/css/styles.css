@@ -1413,7 +1413,7 @@ select option { color: #111; }
 }
 textarea { resize: vertical; }
 
-.site-footer { background: var(--color-blue); border-top: 1px solid var(--color-line); padding: 60px 0 24px; }
+.site-footer { background: var(--color-primary-dark); border-top: 1px solid var(--color-line); padding: 60px 0 24px; }
 .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 34px; }
 .footer-grid img { width: 260px; height: auto; }
 .footer-grid p { color: var(--color-muted); max-width: 470px; }
