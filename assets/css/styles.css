@@ -3483,3 +3483,113 @@ body {
 .project-video-grid {
   margin-top: 2rem;
 }
+
+/* CNIGA case study media sections */
+.hero-actions,
+.cniga-store-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.hero-content .hero-actions {
+  justify-content: flex-start;
+}
+
+.cniga-media-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2.2fr) minmax(220px, .8fr);
+  align-items: center;
+  gap: 28px;
+  margin: 34px 0 42px;
+}
+
+.cniga-browser-frame,
+.cniga-phone-frame,
+.cniga-video-grid .article-video-embed,
+.cniga-instagram-wrap {
+  overflow: hidden;
+  border-radius: 28px;
+  background: #071013;
+  box-shadow: 0 24px 65px rgba(3,19,24,.16);
+}
+
+.cniga-browser-frame video,
+.cniga-phone-frame video {
+  display: block;
+  width: 100%;
+  border: 0;
+  background: #071013;
+}
+
+.cniga-phone-frame {
+  max-width: 300px;
+  margin-inline: auto;
+  border: 10px solid #071013;
+  border-radius: 34px;
+}
+
+.cniga-app-showcase {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 940px;
+  margin: 34px auto 42px;
+}
+
+.cniga-app-showcase figure {
+  margin: 0;
+  padding: 10px;
+  border-radius: 30px;
+  background: #071013;
+  box-shadow: 0 20px 58px rgba(3,19,24,.16);
+}
+
+.cniga-app-showcase img {
+  display: block;
+  width: 100%;
+  border-radius: 22px;
+}
+
+.cniga-video-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(320px, .8fr);
+  align-items: start;
+  gap: 28px;
+  margin-top: 34px;
+}
+
+.cniga-video-grid .article-video-embed {
+  margin: 0;
+}
+
+.cniga-instagram-wrap {
+  min-height: 520px;
+  padding: 10px;
+  background: #fff;
+}
+
+.cniga-instagram-wrap .instagram-media {
+  margin: 0 auto !important;
+  min-width: 0 !important;
+  width: 100% !important;
+}
+
+@media (max-width: 900px) {
+  .hero-content .hero-actions,
+  .cniga-media-grid,
+  .cniga-video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content .hero-actions {
+    justify-content: center;
+  }
+
+  .cniga-app-showcase {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+  }
+}
