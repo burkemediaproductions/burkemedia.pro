@@ -1503,6 +1503,7 @@ textarea { resize: vertical; }
 
 /* Homepage starts like the classic BurkeMedia hero: transparent, centered nav, logo appears on scroll */
 .home-page .site-header:not(.is-scrolled) {
+  margin-top: 16px;
   background: transparent;
   border-bottom: 0;
   backdrop-filter: none;
