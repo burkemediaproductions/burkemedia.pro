@@ -3438,7 +3438,6 @@ body {
   .site-header .menu-toggle {
     display: inline-grid !important;
     position: fixed;
-    top:16px;
     right: 20px;
     z-index: 300;
   }
