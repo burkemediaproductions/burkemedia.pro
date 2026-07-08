@@ -3438,6 +3438,7 @@ body {
   .site-header .menu-toggle {
     display: inline-grid !important;
     position: fixed;
+    top:16px;
     right: 20px;
     z-index: 300;
   }
@@ -3491,13 +3492,8 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 14px;
-  margin-top: 28px;
+  margin: 28px auto;
 }
-
-.hero-content .hero-actions {
-  justify-content: flex-start;
-}
-
 .cniga-media-grid {
   display: grid;
   grid-template-columns: minmax(0, 2.2fr) minmax(220px, .8fr);
